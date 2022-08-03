@@ -1,0 +1,35 @@
+body {
+    font-size: 17px;
+    font-family: Verdana, monospace;
+    color: #00ff00;
+    background-color: black;
+}
+
+::selection {
+    background-color: #00ff00;
+    color:black;
+}
+
+#asciiart { color: yellow; }
+
+ul { margin-bottom: 3px; }
+
+li {
+    list-style-type: none;
+    color: #00ff00;
+    margin-left: -40px;
+}
+
+li:before { content: "$ " }
+
+input {
+    font-size: 17px;
+    color: #00ff00;
+    background-color: black;
+    border-style: none;
+    width: 1000px;
+
+    caret-width: 20px;
+}
+
+input:focus { outline: none; }
