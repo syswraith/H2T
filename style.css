@@ -1,0 +1,38 @@
+* {
+    font-family: 'IBM Plex Mono', Consolas, monospace;
+    color: #00ff00;
+    background-color: black;
+}
+
+body {
+    padding: 5px;
+    margin: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    height: 94vh;
+    border-style: groove;
+    border-radius: 5px;
+    border-color: #00ff00
+}
+
+input, input:focus {
+    border: none;
+    font-size: 20px;
+    outline: none;
+    height: 30px;
+    width: 90%;
+    padding: 10px;
+}
+
+@media (max-width: 360px){
+    body {
+        height: 75vh;
+        font-size: 20px;
+    }
+
+    input, input:focus {
+        font-size: 20px;
+        margin: -0.5px;
+        padding: 10px;
+    }
+}
