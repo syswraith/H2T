@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H2T</title>
     <style>
-        body {
-            background-color: black;
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=VT323&display=swap');
+        * {
+            font-family: 'IBM Plex Mono', Consolas, monospace;
             color: #00ff00;
+            background-color: black;
+        }
+        body {
             padding: 5px;
             margin: 10px;
-            font-size: 30px;
+            padding-left: 20px;
+            font-size: 20px;
             height: 94vh;
-
             border-style: groove;
             border-radius: 5px;
             border-color: #00ff00
-
         }
 
         input, input:focus {
-            background-color: black; 
             border: none;
-            font-size: 30px;
+            font-size: 20px;
             outline: none;
-            color: #00ff00;
-
             height: 30px;
             width: 90%;
             padding: 10px;
@@ -37,6 +37,7 @@
                 height: 75vh;
                 font-size: 20px;
             }
+
             input, input:focus {
                 font-size: 20px;
                 margin: -0.5px;
@@ -49,7 +50,7 @@
 <body>
     <span>
         <div></div>
-        $<input placeholder="nano"></input>
+        $<input placeholder="nano" autofocus>
     </span>
     <script></script>
 </body>
