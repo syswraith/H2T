@@ -1,11 +1,8 @@
-const inputCmnd = document.getElementById("inputCmnd");
-const historyKey = 1;
-var upDwn = historyKey;
-var historyVal;
-
 inputCmnd.addEventListener("keydown", function(event) {
     switch(event.key) {
         case "Enter":
+            comparevar = inputCmnd.value;
+            commandCompare(comparevar);
             historyVal = inputCmnd.value;
             sessionStorage.setItem(upDwn, historyVal);
             upDwn = ++upDwn;
