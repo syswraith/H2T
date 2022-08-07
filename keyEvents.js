@@ -1,17 +1,14 @@
 const inputCmnd = document.getElementById("inputCmnd");
-const historyKey = 0;
+const historyKey = 1;
 var upDwn = historyKey;
 var historyVal;
-inputCmnd.value = sessionStorage.setItem(0, "Cannot go back");
-
-if (inputCmnd.value == "undefined"){ inputCmnd.value = sessionStorage.getItem(0); }
 
 inputCmnd.addEventListener("keydown", function(event) {
     switch(event.key) {
         case "Enter":
-            upDwn = ++upDwn;
             historyVal = inputCmnd.value;
             sessionStorage.setItem(upDwn, historyVal);
+            upDwn = ++upDwn;
             inputCmnd.value = "";
             break;
         case "ArrowUp":
@@ -19,12 +16,9 @@ inputCmnd.addEventListener("keydown", function(event) {
                 inputCmnd.value = sessionStorage.getItem(--upDwn);
                 
             }
-            else if (upDwn == 0){
-                inputCmnd.value = sessionStorage.getItem(0);
-                console.log("ERR: back not possible");
-            }
             else if (upDwn == 1){
                 inputCmnd.value = sessionStorage.getItem(upDwn);
+                console.log("ERR: back not possible");
             }
             else { console.log("ERR: Unknown") }
             break;
