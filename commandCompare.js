@@ -2,9 +2,32 @@ function commandCompare(comparevar){
     switch(comparevar){
         case "help":
             var newCommand = document.createElement("li");
-            newCommand.innerHTML = "help: You can use the following commands:<pre> whoami     hostname     history<br> date       history      ls<br> uname      reboot<br><br> Alternatively, you can use command help with 'help [command]'</pre>";
+            newCommand.innerHTML = `
+            help<br> 
+            You can use the following commands:
+        <pre>
+whoami      clear       reboot
+ls          date        history
+uname       neofetch
+        </pre>
+            `;
             appendSpace.appendChild(newCommand);
             break;
+
+        case "neofetch":
+            var newCommand = document.createElement("li");
+            newCommand.innerHTML = `
+            neofetch
+            <pre>   
+██   ██ ██████  ████████    ____________________________
+██   ██      ██    ██      |    Hyper Text Terminal     |
+███████  █████     ██      |          made by           |
+██   ██ ██         ██      |______  {syswraith}  _______|
+██   ██ ███████    ██              |____________|
+            </pre>
+            `;
+            appendSpace.appendChild(newCommand);
+            break;            
 
         case "whoami":
             var newCommand = document.createElement("li");
@@ -16,7 +39,20 @@ function commandCompare(comparevar){
             appendSpace.innerHTML = "";
             break;
 
+        case "reboot":
+            sessionStorage.clear();
+            localStorage.clear();
+            location.reload();
+
         case "ls":
+            var newCommand = document.createElement("li");
+            newCommand.innerHTML = `
+            ls
+            <pre>
+aboutme.txt     guide.txt
+            </pre>
+            `;
+            appendSpace.appendChild(newCommand);
             break;
 
         case "date":
